@@ -1,19 +1,22 @@
 import { useState } from "react";
-import { Header } from "./components/header"
-import { ThemeContext } from "./contexts/themeContext"
+import { Header, Filter, CardContainer } from "./components"
+import { FilterContext } from "./contexts/filterContext"
 
 function App() {
 
-  const [isDark, setIsDark] = useState(false);
+  // Estado del FilterContext
+  const [filter, setFilter] = useState('All');
 
   return (
-    <ThemeContext value={{isDark, setIsDark}}>
-      <main className="flex flex-col items-center light-gradient dark:dark-gradient h-screen">
+    <FilterContext value={{filter, setFilter}}>
+      <main className="flex flex-col items-center light-gradient dark:dark-gradient h-auto text-Neutral-900 dark:text-Neutral-0">
         <section className="w-[343px] my-6">
           <Header />
+          <Filter />
+          <CardContainer />
         </section>
       </main>
-    </ThemeContext>
+    </FilterContext>
   )
 }
 

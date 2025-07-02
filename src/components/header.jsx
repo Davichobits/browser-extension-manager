@@ -1,5 +1,4 @@
-import { useEffect, useContext } from "react";
-import { ThemeContext } from "../contexts/themeContext";
+import { useEffect, useState } from "react";
 
 import Logo from "../assets/images/logo.svg";
 import LogoDark from '../assets/images/logo-dark.svg'
@@ -8,7 +7,7 @@ import MoonLogo from "../assets/images/icon-moon.svg";
 
 export const Header = () => {
 
-  const {isDark, setIsDark} = useContext(ThemeContext)
+  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -20,12 +19,12 @@ export const Header = () => {
   const handleClick = () => {
     const html = document.documentElement;
     const isDarkChanged = html.classList.toggle('dark');
-    localStorage.setItem('theme', isDarkChanged ? 'dark' : 'light');
     setIsDark(isDarkChanged);
+    localStorage.setItem('theme', isDarkChanged ? 'dark' : 'light');
   };
 
   return (
-    <header className="bg-Neutral-0 dark:bg-Neutral-800 text-neutral-100 h-[66px] px-3 py-2 flex place-content-between items-center rounded-[10px]">
+    <header className="bg-Neutral-0 dark:bg-Neutral-800 text-neutral-100 h-[66px] px-3 py-2 flex place-content-between items-center rounded-[10px] mb-10">
       <img src={isDark ? LogoDark : Logo } alt="Logo" />
       <button
         onClick={handleClick}
