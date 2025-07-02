@@ -28,7 +28,7 @@ export const Header = () => {
       <img src={isDark ? LogoDark : Logo } alt="Logo" />
       <button
         onClick={handleClick}
-        className="bg-Neutral-100 dark:bg-Neutral-700 size-[50px] rounded-lg grid place-content-center"
+        className="bg-Neutral-100 hover:bg-Neutral-200 dark:hover:bg-Neutral-600 dark:bg-Neutral-700 size-[50px] rounded-lg grid place-content-center cursor-pointer"
       >
         
         <img src={isDark ? SunLogo: MoonLogo} alt="" />
