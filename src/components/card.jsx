@@ -19,7 +19,7 @@ export const Card = ({logo, name, description, isActive, setExtensions, extensio
     <div className="bg-Neutral-0 dark:bg-Neutral-700 border border-Neutral-200 rounded-[20px] p-[20px]">
 
       <div className="flex items-start gap-4 mb-4">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Logo" />
         <div>
           <h2 className="text-[20px] font-bold mb-2">{name}</h2>
           <p className="text-Neutral-600 dark:text-Neutral-300 text-[15px]">{description}</p>

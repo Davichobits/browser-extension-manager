@@ -9,7 +9,7 @@ export const CardContainer = () => {
   const filterState = useContext(FilterContext);
 
   let filteredExtensions;
-  
+
   if (filterState.filter === 'Active') {
     filteredExtensions = extensions.filter(extension => extension.isActive);
   } else if (filterState.filter === 'Inactive') {
@@ -20,7 +20,7 @@ export const CardContainer = () => {
 
 
   return (
-    <section className='flex flex-col gap-3'>
+    <section className='grid gap-3 md:grid-cols-2 xl:grid-cols-3'>
       {
         filteredExtensions.map(extension =>(
           <Card key={extension.name} setExtensions={setExtensions} extensions={extensions} {...extension} />
