@@ -1,4 +1,4 @@
-import { Button } from "./Button"
+import { Button } from "./button"
 import { useContext } from "react";
 import { FilterContext } from "../contexts/filterContext";
 

@@ -1,4 +1,4 @@
-import { Button } from "./Button"
+import { Button } from "./button"
 import { Toggle } from 'rsuite';
 import 'rsuite/Toggle/styles/index.css';
 
