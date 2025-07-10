@@ -2,6 +2,8 @@
 
 A browser extension manager that allows you to enable, disable, and filter extensions easily.
 
+![Desktop Design Dark Focus](./public/assets/design/desktop-design-dark-focus.jpg)
+
 The project is built with a mock data in JSON format, simulating a real-world scenario where you can manage your browser extensions.
 
 ## Features
